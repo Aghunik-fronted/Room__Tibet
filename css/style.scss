@@ -1,4 +1,177 @@
-body {
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../fonts/Inter_18pt-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: "Nunito Sans";
+//     src: url("../fonts/NunitoSans-Bold.woff2") format("woff2");
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Nunito Sans";
+//     src: url("../fonts/NunitoSans-ExtraBold.woff2") format("woff2");
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Nunito Sans";
+//     src: url("../fonts/NunitoSans-Light.woff2") format("woff2");
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Nunito Sans";
+//     src: url("../fonts/NunitoSans-Regular.woff2") format("woff2");
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Nunito Sans";
+//     src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2");
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: "NEXT ART";
+    src: url("../fonts/NEXT-ART_Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+.header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background: url(../images/Rectangle1.png);
+    max-width: 1920px;
+    width: 100%;
+    min-height: 985px;
+.container {
+    display: flex;
+    margin: 0 auto;
+    padding: 16px 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    max-width: 1180px;
+    width: 100%;
+}
+    &__container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__nav {
+        display: flex;
+    }
+    &__menu {
+        display: flex;
+        gap: 24px;
+        margin-left: 50px;
+    }
+    &__menu-item--light {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 18px;
+        color: #fdfdfd;
+        list-style: none;
+    }
+    &__menu-item {
+        font-family: "Nunito Sans";
+        font-weight: 600;
+        font-size: 18px;
+        color: #fdfdfd;
+        list-style: none;
+    }
+    &__btn{
+        border-radius: 4px;
+        padding: 12px 24px;
+        max-width: 157px;
+        max-height: 44px;
+        background: #1a3e3e;
+    }
+    &__btn-link {
+        font-family: "Nunito Sans";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #fdfdfd;
+        text-decoration: none;
+    }
+    &__btn:hover {
+        border: 1px solid #1a3e3e;
+        background: #fdfdfd;
+        transition: all 0.3s ease;
+    }
+    &__btn:hover &__btn-link {
+        color: #1a3e3e;
+    }
+    &__box {
+        padding-top: 423px;
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__title {
+        font-family: "NEXT ART";
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: #fdfdfd;
+    }
+    &__box-container {
+        padding: 40px 42px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        max-width: 1180px;
+        width: 100%;
+        min-height: 161px;
+        backdrop-filter: blur(6px);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    &__form {
+        border: 1px solid #e1e3e4;
+        border-radius: 8px;
+        padding: 0px 16px;
+        max-width: 270px;
+        width: 100%;
+        min-height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__form-text {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #fdfdfd;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 0;
+    }
 }
