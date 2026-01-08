@@ -57,14 +57,14 @@
     display: flex;
     margin: 0;
     padding: 0;
-    background: url(../images/Rectangle1.png);
+    background: url(../images/back1.webp);
     max-width: 1920px;
     width: 100%;
     min-height: 985px;
 .container {
     display: flex;
     margin: 0 auto;
-    padding: 16px 0;
+    padding: 16px 0 82px;
     box-sizing: border-box;
     flex-direction: column;
     max-width: 1180px;
@@ -93,12 +93,21 @@
         color: #fdfdfd;
         list-style: none;
     }
+    &__menu-item--light:hover {
+        color: #F2BE22;
+        cursor: pointer;
+    }
     &__menu-item {
         font-family: "Nunito Sans";
         font-weight: 600;
         font-size: 18px;
         color: #fdfdfd;
         list-style: none;
+    }
+    &__menu-item:hover  {
+        color: #F2BE22;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
     &__btn{
         border-radius: 4px;
@@ -144,25 +153,100 @@
         padding: 40px 42px;
         box-sizing: border-box;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         border-radius: 10px;
         max-width: 1180px;
         width: 100%;
-        min-height: 161px;
+        max-height: 161px;
         backdrop-filter: blur(6px);
         background: rgba(255, 255, 255, 0.2);
+        gap: 24px;
     }
-    &__form {
-        border: 1px solid #e1e3e4;
-        border-radius: 8px;
-        padding: 0px 16px;
+    &__box-item {
         max-width: 270px;
         width: 100%;
         min-height: 52px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    &__select {
+        border: 1px solid #e1e3e4;
+        border-radius: 8px;
+        padding: 14px 16px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
+    }
+    &__data {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #fdfdfd;
+        max-width: 210px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-right: 8px;
+        box-sizing: border-box;
+    }
+    &__block {
+        position: relative;
+        top: 0;
+        left: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background: #ffff;
+        border: 1px solid #e1e3e4;
+        max-width: 250px;
+        width: 100%;
+        display: none;
+    }
+    &__data-icon:active &__block{
+        display: block;
+        cursor: pointer;
+    }
+    &__block--item {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #e1e3e4;
+        background-color: #1a3e3e;
+        padding: 14px;
+        box-sizing: border-box;
+        margin: 0;
+        max-width: 250px;
+        width: 100%;
+        max-height: 50px;
+    }
+    &__block--col {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #1a3e3e;
+        padding: 14px;
+        box-sizing: border-box;
+        margin: 0;
+        border: none;
+        max-width: 250px;
+        width: 100%;
+        max-height: 50px;
+    }
+    &__block--col:hover {
+        color: #e1e3e4;
+        background-color: #1a3e3e;
+        transition: all 0.3s ease;
+        cursor: pointer;
     }
     &__form-text {
         font-family: "Nunito Sans";
@@ -173,5 +257,128 @@
         padding: 8px;
         box-sizing: border-box;
         margin: 0;
+    }
+    &__btn-row {
+        font-family: "Nunito Sans";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #1a3e3e;
+        background: #fdfdfd;
+        border-radius: 4px;
+        padding: 16px 36px;
+        box-sizing: border-box;
+        max-width: 213px;
+        width: 100%;
+        min-height: 52px;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+    }
+    &__btn-row:hover {
+        border: 1px solid #e1e3e4;
+        background: #1a3e3e;
+        color: #fdfdfd;
+        transition: all 0.3s ease;
+    }
+    &__data {
+
+    }
+}
+.main {
+    display: flex;
+    margin: 0 auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1180px;
+        width: 100%;
+        gap: 24px;
+        margin: 0 auto;
+    }
+    &__img-block {
+        position: relative;
+        top: -274px;
+        left: 130px;
+        margin: 0;
+        padding: 0;
+    }
+    &__circle {
+        position: absolute;
+        top: 43%;
+        left: 43%;
+        border-radius: 100px;
+        max-width: 50px;
+        width: 100%;
+        min-height: 50px;
+        background: rgba(253, 253, 253, 0.6);
+        margin: 0;
+        padding: 0;
+    }
+    &__icon {
+        position: absolute;
+        top: 47%;
+        left: 47%;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        max-width: 580px;
+        width: 100%;
+    }
+    &__subtitle {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 83%;
+        color: #f2be22;
+        margin: 0;
+        padding: 0;
+    }
+    &__title {
+        font-family: "Nunito Sans";
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 120%;
+        color: #18121e;
+        margin: 0;
+        padding: 8px 0;
+        box-sizing: border-box;
+    }
+    &__text {
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #18121e;
+        margin: 0;
+        padding: 40px 0;
+    }
+    &__btn {
+        font-family: "Nunito Sans";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #fdfdfd;
+        background: #1a3e3e;
+        border-radius: 4px;
+        padding: 16px 36px;
+        max-width: 150px;
+        width: 100%;
+        max-height: 52px;
+        text-decoration: none;
+        text-align: center;
+    }
+    &__btn:hover {
+        color: #1a3e3e;
+        background: #fdfdfd;
+        border: 1px solid #1a3e3e;
+        transition: all 0.3s ease;
     }
 }

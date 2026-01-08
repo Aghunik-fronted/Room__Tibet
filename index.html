@@ -37,26 +37,67 @@
                 </h1>
                 <div class="header__box-container">
                     <div class="header__box-item">
-                        <form action="" method="post" class="header__form">
-                            <select name="location" id="location" class="header__select">
-                                <!-- <input placeholder="Локация для тура" name="name" type="text"> -->
-                                <option value="location" class="header__option">Великобритания</option>
-                                <option value="location">Россия</option>
-                                <option value="location">США</option>
-                            </select>
-                        </form>
+                        <div class="header__select">
+                           <p class="header__data">Локация для тура</p> 
+                           <img src="images/icons/ep_arrow-down.png" alt="/" class="header__data-icon">
+                        </div>
+                        <div class="header__block">
+                            <div class="header__block--item">Локация для тура</div>
+                            <div class="header__block--col">Великобритания</div>
+                            <div class="header__block--col">Россия</div>
+                            <div class="header__block--col">США</div>
+                        </div>
                         <p class="header__form-text">выберите из списка</p>
                     </div>
                     <div class="header__box-item">
-                        <form action="" method="post" class="header__form"></form>
+                        <div class="header__select">
+                            <p class="header__data">Дата похода</p>
+                            <img src="images/icons/formkit_date.png" alt="/" class="header__data-icon">
+                        </div>
+                        <p class="header__form-text">укажите диапазон</p>
                     </div>
                     <div class="header__box-item">
-                        <form action="" method="post" class="header__form"></form>
+                        <div class="header__select">
+                            <p class="header__data">Участники</p> 
+                            <img src="images/icons/ep_arrow-down.png" alt="/" class="header__data-icon">
+                        </div>
+                        <p class="header__form-text">минимум 4 человека</p>
                     </div>
-                    <div class="header__box-item"></div>
+                    <div class="header__box-item">
+                        <a href="#" class="header__btn-row">Найти программу</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <main class="main">
+        <div class="main__container">
+            <div class="main__img-container">
+                <img src="images/img5.webp" alt="/" class="main__img">
+                <div class="main__img-block">
+                    <img src="images/img4.webp" alt="/" class="main__img--item">
+                    <div class="main__circle"></div>
+                    <img src="images/icons/fluent_play-12-filled.png" alt="/" class="main__icon">
+                </div>
+            </div>
+            <div class="main__block">
+                <h3 class="main__subtitle">о нашем походе</h3>
+                <h2 class="main__title">
+                    Исследуйте все горные массивы мира вместе с нами
+                </h2>
+                <p class="main__text">
+                    Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. 
+                    Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, 
+                    "consectetur"и занялся его поисками в классической латинской литературе.
+                </p>
+                <a href="#" class="main__btn">Программа тура</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelector('header__data-icon').addEventListener('click', function() {
+        this.classList.toggle('active');
+        });
+    </script>
+</body>   
 </html>
