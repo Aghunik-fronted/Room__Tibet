@@ -38,28 +38,39 @@
                 <div class="header__box-container">
                     <div class="header__box-item">
                         <div class="header__select">
-                           <p class="header__data">Локация для тура</p> 
-                           <img src="images/icons/ep_arrow-down.png" alt="/" class="header__data-icon">
-                        </div>
-                        <div class="header__block">
-                            <div class="header__block--item">Локация для тура</div>
-                            <div class="header__block--col">Великобритания</div>
-                            <div class="header__block--col">Россия</div>
-                            <div class="header__block--col">США</div>
+                            <div class="header__select-row">
+                                <p class="header__data">Локация для тура</p> 
+                                <img src="images/icons/ep_arrow-down.png" alt="/" class="header__data-icon">
+                            </div>
+                            <div class="header__block">
+                                <div class="header__block--item">Локация для тура</div>
+                                <div class="header__block--col">Великобритания</div>
+                                <div class="header__block--col">Россия</div>
+                                <div class="header__block--col">США</div>
+                            </div>
                         </div>
                         <p class="header__form-text">выберите из списка</p>
                     </div>
                     <div class="header__box-item">
                         <div class="header__select">
-                            <p class="header__data">Дата похода</p>
-                            <img src="images/icons/formkit_date.png" alt="/" class="header__data-icon">
+                            <div class="header__select-row">
+                                <p class="header__data">Дата похода</p>
+                                <img src="images/icons/formkit_date.png" alt="/" class="header__data-icon">
+                            </div>
                         </div>
                         <p class="header__form-text">укажите диапазон</p>
                     </div>
                     <div class="header__box-item">
                         <div class="header__select">
-                            <p class="header__data">Участники</p> 
-                            <img src="images/icons/ep_arrow-down.png" alt="/" class="header__data-icon">
+                            <div class="header__select-row">
+                                <p class="header__data">Участники</p> 
+                                <img src="images/icons/ep_arrow-down.png" alt="/" class="header__data-icon">
+                            </div>
+                            <div class="header__block">
+                                <div class="header__block--item">4</div>
+                                <div class="header__block--col">5</div>
+                                <div class="header__block--col">6</div>
+                            </div>
                         </div>
                         <p class="header__form-text">минимум 4 человека</p>
                     </div>
@@ -93,10 +104,76 @@
                 <a href="#" class="main__btn">Программа тура</a>
             </div>
         </div>
+        <div class="main__wrapper">
+            <div class="main__wrapper--container">
+               <div class="main__wraperr--box">
+                    <h3 class="main__wrapper--subtitle">наше предложение</h3>
+                    <h1 class="main__wrapper--title">Лучшие программы для тебя</h1>
+                    <p class="main__wrapper--text">
+                        Его корни уходят в один фрагмент классической латыни 45 года н.э., 
+                        то есть более двух тысячелетий назад. 
+                        Ричард МакКлинток, профессор латыни из колледжа.
+                    </p>
+                    <div class="main__advantages">
+                        <div class="main__wrapper--block">
+                            <img src="images/icons/Group-16.png" alt="/" class="main__wrapper--icon">
+                            <div class="main__title--box">
+                                <h3 class="main__title--item">Опытный гид</h3>
+                                <p class="main__title--text">
+                                    Для современного мира базовый вектор развития предполагает
+                                    независимые способы реализации соответствующих условий активизации.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="main__wrapper--block">
+                            <img src="images/icons/Group-17.png" alt="/" class="main__wrapper--icon">
+                            <div class="main__title--box">
+                                <h3 class="main__title--item">Безопасный поход</h3>
+                                <p class="main__title--text">
+                                 Для современного мира базовый вектор развития предполагает 
+                                    независимые способы реализации соответствующих условий активизации.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="main__wrapper--block">
+                            <img src="images/icons/Group-18.png" alt="/" class="main__wrapper--icon">
+                            <div class="main__title--box">
+                                <h3 class="main__title--item">Лояльные цены</h3>
+                                <p class="main__title--text">
+                                    Для современного мира базовый вектор развития предполагает 
+                                    независимые способы реализации соответствующих условий активизации.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#" class="main__btn--link">Стоимость программ</a>
+                    </div>
+               </div>
+               <div class="main__wrapper--grid">
+                    <img src="images/Rectangle-8.webp" alt="/">
+                    <img src="images/Rectangle-9.webp" alt="/">
+                    <img src="images/Rectangle-10.webp" alt="/">
+                    <img src="images/Rectangle-11.webp" alt="/">
+               </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__container">
+                <div class="section__title-box">
+                    <h3 class="section__subtitle">по версии отдыхающих</h3>
+                    <h2 class="section__title">Популярные направления</h2>
+                </div>
+                <div class="section__box">
+                    <div class="section__img--comtainer"></div>
+                    <div class="section__img--comtainer"></div>
+                    <div class="section__img--comtainer"></div>
+                </div>
+                <div class="section__btn">Рейтинг направлений</div>
+            </div>
+        </div>
     </main>
     <script>
-        document.querySelector('header__data-icon').addEventListener('click', function() {
-        this.classList.toggle('active');
+        document.querySelector('header__select').addEventListener('click', function() {
+        this.classList.toggle('show'). style.display = 'block';
         });
     </script>
 </body>   
