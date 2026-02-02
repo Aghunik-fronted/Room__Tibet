@@ -137,12 +137,13 @@
 .header__select {
   border: 1px solid #e1e3e4;
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: 14px 8px 14px 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin: 0;
 }
 .header__select-row {
   display: flex;
@@ -151,8 +152,8 @@
   gap: 16px;
   max-width: 270px;
   width: 100%;
-  padding: 0 16px;
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 .header__data {
   font-family: "Nunito Sans";
@@ -201,7 +202,7 @@
   line-height: 150%;
   color: #e1e3e4;
   background-color: #1a3e3e;
-  padding: 14px;
+  padding: 14px 8px 14px 16px;
   box-sizing: border-box;
   margin: 0;
   max-width: 270px;
@@ -299,10 +300,16 @@
   margin: 0;
   padding: 0;
 }
+.main__circle:hover {
+  cursor: pointer;
+}
 .main__icon {
   position: absolute;
   top: 47%;
   left: 47%;
+}
+.main__icon:hover {
+  cursor: pointer;
 }
 .main__block {
   display: flex;
@@ -546,8 +553,17 @@
   flex-direction: column;
   margin: 0;
   animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  animation-direction: alternate-reverse;
+}
+.section__img--comtainer:hover {
+  animation-name: slide;
   animation-duration: 5s;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-direction: alternate-reverse;
 }
 .section__icon {
   position: absolute;
@@ -572,7 +588,6 @@
   min-height: 500px;
   height: 100%;
   cursor: pointer;
-  transition: 5s ease-in;
 }
 .section__desc {
   max-width: 380px;
@@ -585,6 +600,11 @@
   padding: 20px 32px 20px;
   box-sizing: border-box;
   margin: 0;
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-direction: alternate-reverse;
 }
 .section__desc:hover {
   padding: 30px 32px 20px;
@@ -592,7 +612,9 @@
   height: 100%;
   animation-name: slide;
   animation-duration: 5s;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-direction: alternate-reverse;
 }
 .section__block-desc {
   display: flex;
@@ -642,7 +664,11 @@
 .section__img--comtainer:hover .section__close {
   display: block;
   min-height: 100%;
-  transition: 5s ease-in-out;
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  animation-direction: alternate-reverse;
 }
 .section__text {
   max-width: 316px;
@@ -1009,17 +1035,18 @@ picture:hover .gallery__zoom {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: #fdfdfd;
   box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
   border-radius: 6px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 .footer__title-box {
   max-width: 380px;
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 0;
   margin: 0;
@@ -1078,6 +1105,12 @@ picture:hover .gallery__zoom {
   border: none;
   margin: 0;
   margin-left: 8px;
+}
+.footer__btn:hover {
+  background: #fdfdfd;
+  border: 1px solid #1a3e3e;
+  color: #1a3e3e;
+  transition: all 0.3s ease;
 }
 .footer__text {
   font-family: "Nunito Sans";
@@ -1188,6 +1221,11 @@ picture:hover .gallery__zoom {
   margin: 0;
   padding: 0;
 }
+.footer__list--icon {
+  position: relative;
+  top: 0;
+  left: 0;
+}
 .footer__list--link {
   font-family: "Nunito Sans";
   font-size: 14px;
@@ -1202,12 +1240,16 @@ picture:hover .gallery__zoom {
   color: #f2be22;
   transition: all 0.3s;
 }
-.footer__list:hover .footer__list--icon {
-  text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  color: #f2be22;
-  transition: all 0.3s;
+.footer__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.footer__list:hover .footer__list--icon .footer__right {
+  display: block;
 }
 .footer__new {
   font-family: "Nunito Sans";
@@ -1229,6 +1271,41 @@ picture:hover .gallery__zoom {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer__end {
+  max-width: 1920px;
+  width: 100%;
+  min-height: 66px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #18121e;
+}
+.footer__end--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 0;
+  box-sizing: border-box;
+}
+.footer__end--name {
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  color: #fff;
+}
+.footer__end--policy {
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #fff;
 }
 .footer .get-email {
   font-family: "Nunito Sans";
