@@ -1418,3 +1418,21 @@
         margin: 0;
     }
 }
+@media (max-width:768px) {
+    .main__wrapper--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .main__wrapper--grid {
+        display: none;
+
+        &--box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+}
