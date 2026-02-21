@@ -19,15 +19,57 @@
                         <img src="images/icons/logo1.png" alt="" class="header__img">
                     </a>
                 </div>
-                <div class="header__nav">
-                    <ul class="header__menu">
-                        <li class="header__menu-item--light">Главная</li>
-                        <li class="header__menu-item">Про гида</li>
-                        <li class="header__menu-item">Программа тура</li>
-                        <li class="header__menu-item">Стоимость</li>
-                        <li class="header__menu-item">Блог</li>
-                        <li class="header__menu-item">Контакты</li>
-                    </ul>
+                <div class="header__burger-menu">
+                    <nav class="header__nav">
+                        <img src="images/icons/close_icon.png" alt="/" class="header__burger-close">
+                        <ul class="header__menu">
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-icon">
+                                    <img src="images/icons/Frame.png" class="header__left" alt="/">
+                                    <img src="images/icons/Frame2.png" class="header__right" alt="/">
+                                </a>
+                                <a href="#" class="header__menu-link--light">Главная</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-icon">
+                                    <img src="images/icons/Frame.png" class="header__left" alt="/">
+                                    <img src="images/icons/Frame2.png" class="header__right" alt="/">
+                                </a>
+                                <a href="#" class="header__menu-link">Про гида</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-icon">
+                                    <img src="images/icons/Frame.png" class="header__left" alt="/">
+                                    <img src="images/icons/Frame2.png" class="header__right" alt="/">
+                                </a>
+                                <a href="#" class="header__menu-link">Программа тура</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-icon">
+                                    <img src="images/icons/Frame.png" class="header__left" alt="/">
+                                    <img src="images/icons/Frame2.png" class="header__right" alt="/">
+                                </a>
+                                <a href="#" class="header__menu-link">Стоимость</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-icon">
+                                    <img src="images/icons/Frame.png" class="header__left" alt="/">
+                                    <img src="images/icons/Frame2.png" class="header__right" alt="/">
+                                </a>
+                                <a href="#" class="header__menu-link">Блог</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-icon">
+                                    <img src="images/icons/Frame.png" class="header__left" alt="/">
+                                    <img src="images/icons/Frame2.png" class="header__right" alt="/">
+                                </a>
+                                <a href="#" class="header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__burger-icon">
+                        <img src="images/icons/heroicons-solid_menu-alt-3.png" class="header__burger" alt="/">
+                    </div>
                 </div>
                 <div class="header__btn">
                     <a href="#" class="header__btn-link">Консультация</a>
@@ -38,7 +80,8 @@
                     Насладись прогулкой в горах с&nbsp;командой единомышленников
                 </h1>
                 <div class="header__box-container">
-                    <div class="header__box-item">
+                    <div class="header__box-select">
+                        <div class="header__box-item">
                         <div class="header__select">
                             <div class="header__select-row">
                                 <p class="header__data">Локация для тура</p> 
@@ -76,9 +119,8 @@
                         </div>
                         <p class="header__form-text">минимум 4 человека</p>
                     </div>
-                    <div class="header__box-item">
-                        <a href="#" class="header__btn-row">Найти программу</a>
                     </div>
+                    <a href="#" class="header__btn-row">Найти программу</a>
                 </div>
             </div>
         </div>
@@ -489,10 +531,6 @@
             </div>
        </div>
     </footer>
-    <script>
-        document.querySelector('header__select').addEventListener('click', function() {
-        this.classList.toggle('show'). style.display = 'block';
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>   
 </html>
