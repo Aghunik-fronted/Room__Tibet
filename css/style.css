@@ -594,23 +594,11 @@
   box-sizing: border-box;
   gap: 20px;
 }
-.section__img--comtainer {
+.section__img--container {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
-  animation-name: slide;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0.3s;
-  animation-direction: alternate-reverse;
-}
-.section__img--comtainer:hover {
-  animation-name: slide;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 3s;
-  animation-direction: alternate-reverse;
 }
 .section__icon {
   position: absolute;
@@ -647,21 +635,11 @@
   padding: 20px 32px 20px;
   box-sizing: border-box;
   margin: 0;
-  animation-name: slide;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 3s;
-  animation-direction: alternate-reverse;
 }
 .section__desc:hover {
   padding: 30px 32px 20px;
   min-height: 500px;
   height: 100%;
-  animation-name: slide;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 3s;
-  animation-direction: alternate-reverse;
 }
 .section__block-desc {
   display: flex;
@@ -708,14 +686,12 @@
 .section__close {
   display: none;
 }
-.section__img--comtainer:hover .section__close {
+.section__img--container:hover .section__block {
+  animation: slideUpFade 1s ease forwards;
+}
+.section__img--container:hover .section__close {
   display: block;
   min-height: 100%;
-  animation-name: slide;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 0.3s;
-  animation-direction: alternate-reverse;
 }
 .section__text {
   max-width: 316px;
@@ -1540,5 +1516,15 @@ picture:hover .gallery__zoom {
   }
   .footer__one {
     display: none;
+  }
+}
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
