@@ -143,6 +143,7 @@
         max-width: 157px;
         max-height: 44px;
         background: #1a3e3e;
+        // transition: all 0.3s ease;
     }
     &__btn-link {
         font-family: "Nunito Sans";
@@ -169,6 +170,7 @@
         display: none;
     }
     &__box {
+        padding: 0;
         padding-top: 423px;
         box-sizing: border-box;
         margin: 0;
@@ -218,7 +220,7 @@
         margin: 0;
         padding: 0;
     }
-    &__select.item {
+    &__select {
         border: 1px solid #e1e3e4;
         border-radius: 8px;
         padding: 14px 8px 14px 16px;
@@ -268,7 +270,7 @@
         display: none;
         transition: all 0.3s ease-in-out;
     }
-     &__block. {
+     &__block:active {
         position: relative;
         top: 14px;
         left: 0;
@@ -366,10 +368,12 @@
         gap: 24px;
         margin: 0 auto;
     }
+
     &__img-block {
         position: relative;
         top: -274px;
         left: 130px;
+        display: flex;
         margin: 0;
         padding: 0;
     }
@@ -1183,7 +1187,7 @@
         max-width: 380px;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         padding: 0;
         margin: 0;
@@ -1248,6 +1252,7 @@
         border: 1px solid #1a3e3e;
         color: #1a3e3e;
         transition: all 0.3s ease;
+        cursor: pointer;
     }
     &__text {
         font-family: "Nunito Sans";
@@ -1370,6 +1375,10 @@
             color: #fdfdfd;
             text-decoration: none;
         }
+        &--link:hover {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
     }
     &__list:hover &__list--link {
         text-decoration: underline;
@@ -1464,6 +1473,7 @@
         margin: 0;
     }
 }
+
 @media (max-width:768px) {
     body.lock {
         overflow: hidden;
@@ -1573,9 +1583,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 334px 0;
+            padding: 334px 0 0;
             box-sizing: border-box;
-
         }
         &__title {
             font-size: 48px;
@@ -1591,6 +1600,17 @@
         }
         &__btn-row {
             display: block;
+        }
+    }
+
+    .main__container {
+        display: flex;
+        flex-direction: column;
+
+        &__block {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
     .main__wrapper--container {
@@ -1609,4 +1629,18 @@
             margin: 0 auto;
         }
     }
+    .footer {
+        &__box {
+        display: flex;
+        flex-direction: column;
+        }
+        &__title {
+            white-space: nowrap;
+        }
+
+        &__one {
+            display: none;
+        }
+    }
 }
+

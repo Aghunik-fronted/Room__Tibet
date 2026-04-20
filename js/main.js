@@ -1,7 +1,7 @@
 
-
-const select = document.querySelector('.header__select').addEventListener('click', function() {
-item.classList.toggle('open');
+const select = document.querySelector('.header__select');
+select.addEventListener('click', () => {
+    item.classList.toggle('show');
 });
 
 const menu = document.querySelector('.header__nav');
